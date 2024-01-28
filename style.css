@@ -2,7 +2,22 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  background-color: black;
+}
+
+.title-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  h1 {
+    color: purple;
+  }
+  i {
+    font-size: 30px;
+    margin: 20px;
+    color: purple;
+  }
 }
 
 .todo-wrapper {
@@ -24,14 +39,12 @@ body {
   justify-content: center;
   height: 200px;
   width: 100%;
-   
 }
 .label {
   font-size: 20px;
   align-self: flex-start;
   margin-left: 30px;
   margin-bottom: 5px;
-  
 }
 #taskInput {
   width: 90%;
@@ -39,7 +52,6 @@ body {
   border-radius: 8px;
 }
 .circle {
-  margin: 10px;
   border: 1px solid black;
   width: 50px;
   height: 50px;
@@ -49,6 +61,8 @@ body {
   align-items: center;
   background-color: purple;
   transition: background-color 0.5s;
+  align-self: flex-end;
+  margin: 10px 30px 0px 0px;
 
   i {
     color: gold;
@@ -58,7 +72,7 @@ body {
 .circle:hover {
   background-color: gold; /* Change background color on hover */
   cursor: pointer; /* Change cursor to indicate interactivity */
-  i{
+  i {
     color: purple;
   }
 }
@@ -92,4 +106,14 @@ body {
     border-radius: 8px;
     background-color: rgb(216, 234, 241);
   }
+}
+
+.fa-square-check:hover {
+  cursor: pointer;
+}
+
+.checked{
+  color: green;
+  text-decoration: line-through;
+
 }

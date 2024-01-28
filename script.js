@@ -2,12 +2,14 @@ const taskInput = document.querySelector("#taskInput");
 const btn = document.querySelector(".circle");
 const todos = document.querySelector(".todos");
 const remove = document.querySelector(".fa-trash-can");
+const check = document.querySelector(".fa-square-check");
+const li = document.querySelector("li");
 
 const addTodo = () => {
-  const todo = taskInput.value; //declaring the taskinput.value into a shorter variable
-  const liElement = document.createElement("li"); //creating a list element
-  liElement.innerHTML = ` ${todo} <i class="fa-solid fa-trash-can"> </i>`; // adding the html to the list element, here i dont need to add <li>content</li> since the line above already creates the list
-  todos.appendChild(liElement); // append the liElement to the ul element
+  const todo = taskInput.value;
+  const liElement = document.createElement("li");
+  liElement.innerHTML = `<i class="fa-regular fa-square-check"> </i><span class="text">${todo}</span> <i class="fa-solid fa-trash-can"> </i>`;
+  todos.appendChild(liElement);
 };
 
 const removeTodo = (e) => {
@@ -16,5 +18,14 @@ const removeTodo = (e) => {
     listItem.remove();
   }
 };
+
+const checkTodo = (e) => {
+  if (e.target.classList.contains("fa-square-check")) {
+    const listItem = e.target.closest("li");
+    listItem.querySelector(".text").classList.toggle("checked");
+  }
+};
+
 btn.addEventListener("click", addTodo);
 todos.addEventListener("click", removeTodo);
+todos.addEventListener("click", checkTodo);
