@@ -25,13 +25,14 @@ body {
 }
 
 .todo-wrapper {
-  margin: 0 auto;
+  margin-top: 200px;
+  margin: 150px auto;
   max-width: 900px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  
   background-color: #fffff0;
   padding: 20px;
 }
