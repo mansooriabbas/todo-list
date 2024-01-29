@@ -10,8 +10,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap"
       rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
     />
 
     <title>Todo List</title>
@@ -19,11 +24,11 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="title-wrapper">
+      <i class="fa-regular fa-clipboard"></i>
+      <h1>Todo List</h1>
+    </div>
     <div class="todo-wrapper">
-      <div class="title-wrapper">
-        <i class="fa-regular fa-clipboard"></i>
-        <h1>Todo List</h1>
-      </div>
       <div class="add-todo">
         <label class="label" for="taskInput">Add Todo</label>
         <input type="text" id="taskInput" />
@@ -33,7 +38,27 @@
       </div>
       <div class="todo-container">
         <ul class="todos">
-        
+          <li>
+            <i class="fa-regular fa-square-check"> </i
+            ><i class="fa-solid fa-chevron-up"></i
+            ><i class="fa-solid fa-chevron-down"></i
+            ><span class="text">get the thing</span>
+            <i class="fa-solid fa-trash-can"> </i>
+          </li>
+          <li>
+            <i class="fa-regular fa-square-check"> </i
+            ><i class="fa-solid fa-chevron-up"></i
+            ><i class="fa-solid fa-chevron-down"></i
+            ><span class="text">get the other thing</span>
+            <i class="fa-solid fa-trash-can"> </i>
+          </li>
+          <li>
+            <i class="fa-regular fa-square-check"> </i
+            ><i class="fa-solid fa-chevron-up"></i
+            ><i class="fa-solid fa-chevron-down"></i
+            ><span class="text">dont forget the thing</span>
+            <i class="fa-solid fa-trash-can"> </i>
+          </li>
         </ul>
       </div>
     </div>
